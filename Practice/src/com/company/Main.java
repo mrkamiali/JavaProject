@@ -65,6 +65,8 @@ public class Main {
 
         ArrayList<HashMap<String, HashMap<Integer, ArrayList<Message>>>> complex = new ArrayList<HashMap<String, HashMap<Integer, ArrayList<Message>>>>();
 
+
+
         ArrayList<Message> list = new ArrayList<Message>();
         list.add(new Message("Kamran", "kamiali63@gmail.com", "This is Message"));
 
@@ -79,8 +81,9 @@ public class Main {
 
         complex.add(innerMap);
 
-       System.out.println(complex.get(0).get("Data").get(5).get(0).getName());
 
+       System.out.println(complex.get(0).get("Data").get(5).get(0).getName());
+//        System.out.println(""+list.add(new Message("","","")));
 
 /*       for (Map.Entry<Integer,String> values : hmap.entrySet()){
            int key = values.getKey();
