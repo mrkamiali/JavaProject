@@ -1,35 +1,111 @@
-
 package com.company;
 
-import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.HashMap;
+//
+//class Person {
+//    private String name ;
+//    private  int age ;
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//
+//        this.name = name;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void setAge(int age) {
+//
+//        this.age = age;
+//    }
+//
+//    public Person(String name , int age){
+//        this.name = name ;
+//        this.age =  age ;
+//    }
+//
+//    public String toString(){
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(name)
+//                .append(" __ ")
+//                .append(age);
+//
+//        return sb.toString();
+//
+//    };
+//}
+//
+//class Machine {
+//    public void start(){
+//
+//        System.out.println("Machine Started");
+//    }
+//    public  void  stop(){
+//        System.out.println( "Machine Stopped");
+//    }
+//
+//
+//
+//}
+//class Car extends Machine {
+//
+//}
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
 
-        Machine machine1 = new Machine();
+        ArrayList<HashMap<String, HashMap<Integer, ArrayList<Message>>>> complex = new ArrayList<HashMap<String, HashMap<Integer, ArrayList<Message>>>>();
 
-        machine1.start();
-        machine1.stop();
+        ArrayList<Message> list = new ArrayList<Message>();
+        list.add(new Message("Kamran", "kamiali63@gmail.com", "This is Message"));
 
-        Car car1 = new Car();
-
-        car1.start();
-        car1.stop();
-
-
-        Person person1 = new Person("Kamran " , 23);
-        System.out.println(person1);
+        HashMap<Integer, ArrayList<Message>> innerMap1 = new HashMap<Integer, ArrayList<Message>>();
+        innerMap1.put(5, list);
 
 
 
+        HashMap<String, HashMap<Integer,ArrayList<Message>>> innerMap = new HashMap<String, HashMap<Integer, ArrayList<Message>>>();
+
+        innerMap.put("Data",innerMap1);
+
+        complex.add(innerMap);
+
+       System.out.println(complex.get(0).get("Data").get(5).get(0).getName());
 
 
+/*       for (Map.Entry<Integer,String> values : hmap.entrySet()){
+           int key = values.getKey();
+           String val = values.getValue();
+           System.out.println( key + " :" + val);
+       }
+*/
 
+
+//        Scanner input = new Scanner(System.in);
+//
+        ////Child Class concept///
+//        Machine machine1 = new Machine();
+//
+//        machine1.start();
+//        machine1.stop();
+//
+//        Car car1 = new Car();
+//
+//        car1.start();
+//        car1.stop();
+//
+//
+//        Person person1 = new Person("Kamran " , 23);
+//        System.out.println(person1);
 
 
 //      //Multi Dimension Array
@@ -64,9 +140,6 @@ public class Main {
 //        for (String fruit: fruits){
 //            System.out.println(fruit);
 //        };
-
-
-
 
 
 //        //Arrays//
