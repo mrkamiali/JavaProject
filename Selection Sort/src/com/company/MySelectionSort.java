@@ -14,10 +14,11 @@ public class MySelectionSort {
         System.out.println("" + Arrays.toString(arr));
         for (i = 0; i < arr.length - 1; i++) {
             int index = i;
+
             System.out.println("Step "+(i+1)+" " + Arrays.toString(arr));
 
             for (j = i + 1; j < arr.length; j++)
-//                System.out.println("before Loop " + j);
+
                 if (arr[j] < arr[index])
 //                System.out.println("Item " +arr[j]);
                     index = j;

@@ -7,7 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        int n, c, d, swap;
+        int[] arr1 = {23, 42, 4, 16, 8, 15};
+
+        MyBubbleSort.BubbleSort(arr1);
+
+      /*  int n, c, d, swap;
         Scanner in = new Scanner(System.in);
 
         System.out.println("Input number of integers to sort");
@@ -22,18 +26,22 @@ public class Main {
 
         for (c = 0; c < (n - 1); c++) {
             for (d = 0; d < n - c - 1; d++) {
-                if (array[d] > array[d + 1]) /* For descending order use < */ {
+                if (array[d] > array[d + 1]) *//* For descending order use < *//* {
                     swap = array[d];
                     array[d] = array[d + 1];
                     array[d + 1] = swap;
                 }
             }
+            System.out.println("Step "+Arrays.toString(array));
+
         }
 
         System.out.println("Sorted list of numbers");
-
-        for (c = 0; c < n; c++)
-            System.out.println(Arrays.toString());
+        System.out.println(Arrays.toString(array));
+*/
+       /* for (c = 0; c < n; c++){
+            System.out.println(array[c]);
+        }*/
     }
 }
 
