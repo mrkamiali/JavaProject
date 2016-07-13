@@ -14,7 +14,7 @@ public class Util {
         System.out.println("Enter Teacher Age:");
         int age = in.nextInt();
         System.out.println("Enter Teacher Qualification:");
-        String qualification = in.nextLine();
+        String qualification = in.next();
 
         return new Teacher(name, age, qualification);
     }
@@ -25,7 +25,7 @@ public class Util {
         char choice;
         do {
             uni.getTeacher(addTeacher());
-            System.out.println("Do you Want to Add More Student: y/n");
+            System.out.print("Do you Want to Add More Teachers : y/n, ");
             choice = in.next().charAt(0);
             if ((choice == 'n' || choice == 'N') || (uni.counter == uni.totalnumberofTeachers())) {
                 doContine = false;
